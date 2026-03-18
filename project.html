@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2C Robotics</title>
+
+<link rel="stylesheet" href="project.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>    
+</head>
+<body>
+
+<!--------------------- NAVBAR ----------------->
+<header class="navbar">
+
+<a href="index.html" class="logo">
+<img src="logo1.png" alt="Logo">
+<h2>R2C Robotics</h2>
+</a>
+
+<nav class="nav-links">
+
+<a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
+<a href="about.html"><i class="fas fa-user"></i><span>About</span></a>
+<a href="service.html"><i class="fas fa-cogs"></i><span>Service</span></a>
+
+<!-- PAGES -->
+<div class="dropdown">
+
+<a href="#" class="pages-link">
+<i class="fas fa-file-alt"></i>
+<span>Pages ▾</span>
+</a>
+
+<div class="dropdown-menu">
+<a href="faq.html">FAQ's</a>
+<a href="project.html">Projects</a>
+<a href="gallery.html">Gallery</a>
+</div>
+
+</div>
+
+<a href="contact.html">
+<i class="fas fa-envelope"></i>
+<span>Contact Us</span>
+</a>
+
+</nav>
+
+<a href="contact.html" class="nav-btn">
+<span>Let's Talk</span>
+<span class="arrow-btn">></span>
+</a>
+
+<div class="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</header>
+
+<!-- Project form -->
+
+<section class="project-hero">
+
+  <div class="project-left">
+    <h1>Our Student Projects</h1>
+
+    <p>
+      At R2C Robotics Academy, students learn by building real projects.
+      From robotics cars to AI models and drone technology, our students
+      create innovative solutions while learning STEM concepts.
+    </p>
+
+    <a href="#projects-section" class="project-btn">
+      View Projects
+    </a>
+  </div>
+
+  <div class="project-right">
+    <img src="project-banner-img.jpg" alt="Student Robotics Projects">
+  </div>
+
+</section>
+
+<!--  Robotics Projects  -->
+
+<section class="portfolio">
+
+<h1 class="title"> Robotics Projects </h1>
+
+<div class="card-container">
+
+<div class="card">
+<img src="project-img/Air main image.jpg.jpeg">
+
+<div class="card-content">
+<h3>Air Quality Monitoring System</h3>
+<a href="https://roboticsr2c.blogspot.com/2026/01/vacuum-cleaner-robot.html">Read More →</a>
+</div>
+
+</div>
+
+
+<div class="card">
+<img src="project-img/human follow.jpg">
+
+
+<div class="card-content">
+<h3>Human Following Robot</h3>
+<a href="https://roboticsr2c.blogspot.com/2026/01/human-following-robot.html">Read More →</a>
+</div>
+
+</div>
+
+
+<div class="card">
+<img src="project-img/obstacle robot.jfif">
+
+<div class="card-content">
+<h3>Obstacle Avoidance Robot</h3>
+<a href="https://roboticsr2c.blogspot.com/2026/01/obstacle-avoidance-robot.html">Read More →</a>
+</div>
+
+</div>
+
+<div class="card">
+<img src="project-img/line following robot.jpeg">
+
+<div class="card-content">
+<h3>Line Following Robot</h3>
+<a href="https://roboticsr2c.blogspot.com/2026/01/line-following-robot.html">Read More →</a>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- footer -->
+
+<footer class="main-footer">
+    <p>
+        Copyright © 2025 | 
+        <a href="https://www.R2C.co.in" target="_blank">www.R2C.co.in</a> | 
+        All rights reserved
+    </p>
+</footer>
+
+    
+</body>
+</html>
+
+<!-- Script -->
+
+<script>
+let menuBtn = document.getElementById("menu-btn");
+let nav = document.getElementById("nav");
+
+menuBtn.onclick = function(){
+
+if(nav.style.display === "flex"){
+nav.style.display = "none";
+}
+else{
+nav.style.display = "flex";
+}
+
+}
+</script>
+
+<!-- Robotics project script-->
+
+<script>
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+card.addEventListener("mouseenter",()=>{
+card.style.transform="translateY(-15px)";
+});
+
+card.addEventListener("mouseleave",()=>{
+card.style.transform="translateY(0)";
+});
+});
+</script>

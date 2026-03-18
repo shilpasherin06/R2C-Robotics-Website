@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2C Robotics</title>
+
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<!-- TOP ALERT -->
+  <div id="topAlert" class="top-alert">
+  <span id="alertMessage"></span>
+</div>
+
+    
+<!-- NAVBAR -->
+<header class="navbar">
+
+<a href="index.html" class="logo">
+<img src="logo1.png" alt="Logo">
+<h2>R2C Robotics</h2>
+</a>
+
+<nav class="nav-links">
+
+<a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
+<a href="about.html"><i class="fas fa-user"></i><span>About</span></a>
+<a href="service.html"><i class="fas fa-cogs"></i><span>Service</span></a>
+
+<!-- PAGES -->
+<div class="dropdown">
+
+<a href="#" class="pages-link">
+<i class="fas fa-file-alt"></i>
+<span>Pages ▾</span>
+</a>
+
+<div class="dropdown-menu">
+<a href="faq.html">FAQ's</a>
+<a href="project.html">Projects</a>
+<a href="gallery.html">Gallery</a>
+</div>
+
+</div>
+
+<a href="contact.html">
+<i class="fas fa-envelope"></i>
+<span>Contact Us</span>
+</a>
+
+</nav>
+
+<a href="contact.html" class="nav-btn">
+<span>Let's Talk</span>
+<span class="arrow-btn">></span>
+</a>
+
+<div class="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</header>
+
+<!-- contact form -->
+
+<section class="contact-hero">
+
+  <div class="contact-left">
+    <h1>Contact Us</h1>
+    <p>
+      Join R2C Robotics and empower your child with next-generation
+      skills in Coding, Robotics, Drones & AI.
+      We provide Online & Offline training programs.
+    </p>
+
+    <a href="tel:+917904189145" class="contact-btn">
+      Contact Now
+    </a>
+  </div>
+
+  <div class="contact-right">
+    <img src="contact_banner_image.jpg" alt="Robotics Image">
+  </div>
+
+</section>
+<!------------------ Contact Us Section ------------------>
+<section class="contact-section">
+
+  <div class="contact-container">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-left">
+
+      <h4 class="small-title">OUR INFORMATION</h4>
+      <h1>Contact Info</h1>
+
+      <div class="info-card">
+        <div class="icon"><i class='bx bx-map'></i></div>
+        <div>
+          <h3>Location:</h3>
+          <a href="https://maps.app.goo.gl/XxNkuCXvawRivM6f8" target="_blank">
+          <i class="fa-solid fa-location-dot"></i>
+          19, II FLOOR, By Pass Rd, SreeKumaran Travels,<br>
+          Udumalaipettai, Tamil Nadu - 642126
+        </a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="icon"><i class='bx bx-envelope'></i></div>
+        <div>
+          <h3>Email Us:</h3>
+          <p class="email-link">
+        <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=r2cudt@gmail.com&su=Enquiry&body=Hello R2C Team,"
+        target="_blank"rel="noopener noreferrer">
+        <i class="fa-solid fa-envelope"></i>r2cudt@gmail.com</a>
+      </p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="icon"><i class='bx bx-phone'></i></div>
+        <div>
+          <h3>Phone:</h3>
+          <a href="https://wa.me/917904189145" target="_blank">7904189145</a> /
+        <a href="https://wa.me/919655729385" target="_blank">9655729385</a>
+          
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-right-side">
+      <h2>Send us a Message</h2>
+      <form id="contactForm">
+  <input type="text" id="name" placeholder="Name">
+  <input type="text" id="phone" placeholder="Phone">
+  <input type="email" id="email" placeholder="Email">
+  <textarea id="message" placeholder="Message"></textarea>
+  <button type="submit">Submit Now</button>
+</form>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- footer -->
+
+<footer class="main-footer">
+    <p>
+        Copyright © 2025 | 
+        <a href="https://www.R2C.co.in" target="_blank">www.R2C.co.in</a> | 
+        All rights reserved
+    </p>
+</footer>
+
+<!------------------- Script --------------------->
+
+<!--Send us a Message script-->
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const form = document.getElementById("contactForm");
+  const alertBox = document.getElementById("topAlert");
+  const alertText = document.getElementById("alertMessage");
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if(!name || !phone || !email || !message){
+      show("Please fill all fields", "#ff4d4d");
+      return;
+    }
+
+    show("Message sent successfully!", "#00ff88");
+    form.reset();
+  });
+
+  function show(msg,color){
+    alertText.innerText = msg;
+    alertBox.style.background = color;
+    alertBox.classList.add("show");
+
+    setTimeout(()=>{
+      alertBox.classList.remove("show");
+    },3000);
+  }
+
+});
+</script>

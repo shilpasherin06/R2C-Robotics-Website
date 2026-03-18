@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R2C Robotics</title>
+
+    <link rel="stylesheet" href="about.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+
+     <!-- NAVBAR -->
+<header class="navbar">
+
+<a href="index.html" class="logo">
+<img src="logo1.png" alt="Logo">
+<h2>R2C Robotics</h2>
+</a>
+
+<nav class="nav-links">
+
+<a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
+<a href="about.html"><i class="fas fa-user"></i><span>About</span></a>
+<a href="service.html"><i class="fas fa-cogs"></i><span>Service</span></a>
+
+<!-- PAGES -->
+<div class="dropdown">
+
+<a href="#" class="pages-link">
+<i class="fas fa-file-alt"></i>
+<span>Pages ▾</span>
+</a>
+
+<div class="dropdown-menu">
+<a href="faq.html">FAQ's</a>
+<a href="project.html">Projects</a>
+<a href="gallery.html">Gallery</a>
+</div>
+
+</div>
+
+<a href="contact.html">
+<i class="fas fa-envelope"></i>
+<span>Contact Us</span>
+</a>
+
+</nav>
+
+<a href="contact.html" class="nav-btn">
+<span>Let's Talk</span>
+<span class="arrow-btn">></span>
+</a>
+
+<div class="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</header>
+
+<!-- About Form -->
+
+<section class="about-hero">
+
+  <div class="about-left">
+    <h1>About Us</h1>
+
+    <p>
+      R2C Robotics Academy helps kids learn Robotics, Coding,
+      Artificial Intelligence and Drone Technology through
+      practical hands-on training.
+    </p>
+
+    <a href="contact.html" class="about-btn">
+      Contact Us
+    </a>
+  </div>
+
+  <div class="about-right">
+    <img src="about_banner_image.jpg" alt="About Image">
+  </div>
+
+</section>
+
+<!-- EXPERTS SECTION -->
+
+<section class="experts" id="about">
+
+    <div class="section-title">
+        <h1>Learn From <span>The Best</span></h1>
+        <p>Courses designed by Alumni of TCS & Anna University</p>
+    </div>
+
+    <div class="expert-wrapper">
+
+        <!-- Expert 1 -->
+        <div class="expert-box">
+            <div class="expert-img">
+                <img src="sirimg.jpg" alt="">
+            </div>
+            <div class="expert-content">
+                <h2>Prof. Boobalan T.</h2>
+                <h4>Professor in Electronics, Anna University</h4>
+                <p>
+                    "Over the last 20 years, Prof. 
+                    Boobalan T., an esteemed professor in Electronics at Anna University, 
+                    has achieved remarkable success in the field of robotics, completing 300+ 
+                    projects and filed 12 patents and inspiring countless students with his expertise and innovation."
+                </p>
+            </div>
+        </div>
+
+        <!-- Expert 2 -->
+        <div class="expert-box reverse">
+            <div class="expert-img">
+                <img src="mamimg.jpg" alt="">
+            </div>
+            <div class="expert-content">
+                <h2>Mrs. Lakshmipriya</h2>
+                <h4>Software Engineer, TCS</h4>
+                <p>
+                    " With over 13 years of experience, L. Lakshmipriya, a Software Engineer at TCS,
+                     has made significant contributions to various projects, demonstrating expertise in software development. 
+                     She has been involved in all stages of backend application development, including analysis, production, 
+                     and support."
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- footer -->
+
+<footer class="main-footer">
+    <p>
+        Copyright © 2025 | 
+        <a href="https://www.R2C.co.in" target="_blank">www.R2C.co.in</a> | 
+        All rights reserved
+    </p>
+</footer>
+
+    
+</body>
+</html>
+
+
+<!-- Script -->
+ 
+<!-- Experts animation -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const expertSection = document.querySelectorAll(".experts");
+
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+
+      if(entry.isIntersecting){
+        entry.target.classList.add("active");
+      } 
+      else{
+        entry.target.classList.remove("active"); 
+      }
+
+    });
+  }, { threshold: 0.3 });
+
+  expertSection.forEach(section=>{
+    observer.observe(section);
+  });
+
+});
+</script>
